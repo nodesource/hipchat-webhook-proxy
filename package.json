@@ -1,0 +1,21 @@
+{
+  "name": "hipchat-webhooks-sample",
+  "version": "1.0.0",
+  "description": "Hipchat webhooks sample for N|Solid",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nodesource/hipchat-webhooks-sample.git"
+  },
+  "author": "Minwoo Jung",
+  "bugs": {
+    "url": "https://github.com/nodesource/hipchat-webhooks-sample/issues"
+  },
+  "homepage": "https://github.com/nodesource/hipchat-webhooks-sample#readme",
+  "dependencies": {
+    "request": "^2.81.0"
+  }
+}
