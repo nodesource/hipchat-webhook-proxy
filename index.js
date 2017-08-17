@@ -47,7 +47,7 @@ http.createServer((req, res) => {
           console.error('Error :', err)
         }
 
-        console.log(`Sent an event message to hipchat: ${message}`)
+        console.log(`Sent an event notification to hipchat: ${message}`)
       })
     })
   } else {

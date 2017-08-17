@@ -1,20 +1,20 @@
 {
-  "name": "hipchat-webhooks-sample",
+  "name": "hipchat-webhook-proxy",
   "version": "1.0.0",
-  "description": "Hipchat webhooks sample for N|Solid",
+  "description": "Hipchat webhook proxy for N|Solid",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nodesource/hipchat-webhooks-sample.git"
+    "url": "git+https://github.com/nodesource/hipchat-webhook-proxy.git"
   },
   "author": "Minwoo Jung",
   "bugs": {
-    "url": "https://github.com/nodesource/hipchat-webhooks-sample/issues"
+    "url": "https://github.com/nodesource/hipchat-webhook-proxy/issues"
   },
-  "homepage": "https://github.com/nodesource/hipchat-webhooks-sample#readme",
+  "homepage": "https://github.com/nodesource/hipchat-webhook-proxy#readme",
   "dependencies": {
     "request": "^2.81.0"
   }
