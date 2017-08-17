@@ -24,6 +24,14 @@ $ HIPCHAT_WEBHOOK_URL={YOUR HIPCHAT_WEBHOOK_URL} node index.js
 ![webhook](https://user-images.githubusercontent.com/5035902/29395982-c75e1658-834f-11e7-8cde-0120a8a5eae6.png)
 7. Click `SAVE CHANGES` button.
 
-## License
+## Authors and Contributors
 
-MIT
+<table><tbody>
+<tr><th align="left">Minwoo Jung</th><td><a href="https://github.com/JungMinu">GitHub/JungMinu</a></td><td><a href="http://twitter.com/jmwsoft">Twitter/@jmwsoft</a></td></tr>
+</tbody></table>
+
+Contributions are welcomed from anyone wanting to improve this project!
+
+## License & Copyright
+
+**hipchat-webhook-proxy** is Copyright (c) 2017 NodeSource and licensed under the MIT license. All rights not explicitly granted in the MIT license are reserved. See the included [LICENSE](https://github.com/nodesource/hipchat-webhook-proxy/blob/master/LICENSE) file for more details.

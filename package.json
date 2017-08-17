@@ -10,7 +10,8 @@
     "type": "git",
     "url": "git+https://github.com/nodesource/hipchat-webhook-proxy.git"
   },
-  "author": "Minwoo Jung",
+  "author": "NodeSource Inc. <npm@nodesource.com>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/nodesource/hipchat-webhook-proxy/issues"
   },
