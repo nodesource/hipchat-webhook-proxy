@@ -17,7 +17,7 @@ if (!HIPCHAT_WEBHOOK_URL) {
   process.exit(1)
 }
 
-console.log('Hipchat webhook sample for N|Solid')
+console.log('Hipchat webhook proxy for N|Solid')
 
 http.createServer((req, res) => {
   if (req.method === 'POST' && req.url === '/webhooks/hipchat') {
