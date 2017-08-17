@@ -1,4 +1,6 @@
-# Hipchat webhook proxy
+# Hipchat webhook proxy for [N|Solid](https://nodesource.com/products/nsolid)
+
+[![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
 
 Hipchat webhook proxy using generic N|Solid webhook.
 
@@ -14,7 +16,7 @@ This is your `HIPCHAT_WEBHOOK_URL`
 $ HIPCHAT_WEBHOOK_URL={YOUR HIPCHAT_WEBHOOK_URL} nsolid index.js
 ```
 
-or
+<p align="center">or</p>
 
 ```
 $ HIPCHAT_WEBHOOK_URL={YOUR HIPCHAT_WEBHOOK_URL} node index.js
