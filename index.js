@@ -5,6 +5,7 @@ const PORT = 8008
 
 const http = require('http')
 const request = require('request')
+const buildMessage = require('./buildMessage')
 
 if (!HIPCHAT_WEBHOOK_URL) {
   console.error([
@@ -27,9 +28,10 @@ http.createServer((req, res) => {
     })
 
     req.on('end', () => {
+      const message = buildMessage(JSON.parse(data))
       const body = {
         'color': 'red',
-        'message': data,
+        'message': message,
         'notify': true,
         'message_format': 'text'
       }
@@ -45,7 +47,7 @@ http.createServer((req, res) => {
           console.error('Error :', err)
         }
 
-        console.log('Sent an event message to hipchat: ' + data)
+        console.log(`Sent an event message to hipchat: ${message}`)
       })
     })
   } else {

@@ -1,6 +1,6 @@
-### Hipchat webhooks sample
+### Hipchat webhook proxy
 
-Hipchat webhooks sample using generic N|Solid webhook.
+Hipchat webhook proxy using generic N|Solid webhook.
 
 Start the webhook server by running:
 ```
