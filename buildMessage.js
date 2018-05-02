@@ -53,7 +53,18 @@ function heapThresholdExceeded (evt) {
 }
 
 function vulnerabilityDetected (evt) {
-  return `> Vulnerability found in ${evt.vulnerability.package}@${evt.vulnerability.vulnerable} in ${describeAgent(evt)}.`
+  if (evt.vulnerability) {
+    return `> Vulnerability found in ${evt.vulnerability.package}@${evt.vulnerability.vulnerable} in ${describeAgent(evt)}.`
+  } else if (evt.vulnerabilities) {
+    let vuln = 'Vulnerability found in \n'
+    for (let i = 0, length1 = evt.vulnerabilities.length; i < length1; i++) {
+      vuln += `${evt.vulnerabilities[i].package}@${evt.vulnerabilities[i].vulnerable} in ${describeAgent(evt)}. \n`
+    }
+    return vuln
+  } else {
+    return 'Unknown vulnerability package on Unknown version'
+  }
+
 }
 
 function snapshot (evt) {
@@ -65,11 +76,19 @@ function profile (evt) {
 }
 
 function processBlocked (evt) {
-  const trace = evt.stacktrace.replace('```', `'''`)
-  const lines = trace.split('\n')
-  const first = lines.shift()
-  const result = '> ' + first + ' ```' + lines.join('\n') + '```'
-  return result
+  if (evt.stacktrace) {
+    const trace = evt.stacktrace.replace('```', `'''`)
+    const lines = trace.split('\n')
+    const first = lines.shift()
+    const result = '> ' + first + ' ```' + lines.join('\n') + '```'
+    return result
+  } else if (evt.stack) {
+    const trace = evt.stack.replace('```', `'''`)
+    const lines = trace.split('\n')
+    const first = lines.shift()
+    const result = '> ' + first + ' ```' + lines.join('\n') + '```'
+    return result
+  }
 }
 
 function savedView (evt) {
