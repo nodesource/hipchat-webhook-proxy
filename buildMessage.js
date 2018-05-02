@@ -76,19 +76,11 @@ function profile (evt) {
 }
 
 function processBlocked (evt) {
-  if (evt.stacktrace) {
-    const trace = evt.stacktrace.replace('```', `'''`)
-    const lines = trace.split('\n')
-    const first = lines.shift()
-    const result = '> ' + first + ' ```' + lines.join('\n') + '```'
-    return result
-  } else if (evt.stack) {
-    const trace = evt.stack.replace('```', `'''`)
-    const lines = trace.split('\n')
-    const first = lines.shift()
-    const result = '> ' + first + ' ```' + lines.join('\n') + '```'
-    return result
-  }
+  const trace = (evt.stacktrace) ? evt.stacktrace.replace('```', `'''`) : evt.stack.replace('```', `'''`)
+  const lines = trace.split('\n')
+  const first = lines.shift()
+  const result = '> ' + first + ' ```' + lines.join('\n') + '```'
+  return result
 }
 
 function savedView (evt) {
