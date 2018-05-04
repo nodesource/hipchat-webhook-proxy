@@ -1,0 +1,11 @@
+version: "2"
+services:
+  products-dashboard:
+    build: .
+    ports:
+      - 8008:8008
+    command: npm run start
+    volumes:
+      - ./:/usr/src/hipchat-webhook-proxy
+    environment:
+      - HIPCHAT_WEBHOOK_URL=CHANGE_THIS
